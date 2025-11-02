@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinuxDistro - Скачать дистрибутивы Linux бесплатно | Ubuntu, Mint, Arch, Fedora</title>
+    <meta name="description" content="🚀 Скачать Linux дистрибутивы бесплатно: Ubuntu, Mint, Arch, Fedora, Debian, Kali Linux. Полный каталог дистрибутивов для новичков и программистов. Бесплатные ОС с открытым исходным кодом.">
+    <meta name="keywords" content="скачать linux, дистрибутивы linux, ubuntu, linux mint, arch linux, fedora, debian, kali linux, бесплатные ОС, open source, установка linux, дистрибутивы для начинающих">
+    <meta name="author" content="LinuxDistro">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="LinuxDistro - Скачать дистрибутивы Linux бесплатно">
+    <meta property="og:description" content="Полный каталог дистрибутивов Linux: Ubuntu, Mint, Arch, Fedora, Debian. Бесплатные ОС для новичков и программистов.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ladpurz-jpg.github.io/linuxdistro/">
+    <meta property="og:image" content="https://ladpurz-jpg.github.io/linuxdistro/linux-distro-og.jpg">
+    <meta property="og:site_name" content="LinuxDistro">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LinuxDistro - Скачать дистрибутивы Linux">
+    <meta name="twitter:description" content="Каталог дистрибутивов Linux для скачивания">
+    <meta name="twitter:image" content="https://ladpurz-jpg.github.io/linuxdistro/linux-distro-twitter.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐧</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐧</text></svg>">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ladpurz-jpg.github.io/linuxdistro/">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "LinuxDistro",
+        "description": "Каталог дистрибутивов Linux с возможностью скачивания",
+        "url": "https://ladpurz-jpg.github.io/linuxdistro/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://ladpurz-jpg.github.io/linuxdistro/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "inLanguage": "ru-RU"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Дистрибутивы Linux",
+        "description": "Каталог операционных систем на базе Linux",
+        "url": "https://ladpurz-jpg.github.io/linuxdistro/",
+        "numberOfItems": 30,
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Ubuntu",
+                "description": "Популярный дистрибутив для начинающих"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Linux Mint",
+                "description": "Идеален для перехода с Windows"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Arch Linux",
+                "description": "Для опытных пользователей"
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background-color: #000000;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Навигация */
+        .navbar {
+            background: #111111;
+            color: white;
+            padding: 1.5rem 0;
+            border-bottom: 2px solid #333;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00;
+        }
+
+        /* Кнопки фильтра */
+        .filter-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: #1a1a1a;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .filter-btn:hover {
+            background: #00ff00;
+            color: #000000;
+            transform: scale(1.05);
+        }
+
+        .filter-btn.active {
+            background: #00ff00;
+            color: #000000;
+        }
+
+        /* Поиск */
+        .search-container {
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        #searchInput {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px 20px;
+            background: #1a1a1a;
+            border: 1px solid #00ff00;
+            border-radius: 25px;
+            color: #ffffff;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        #searchInput:focus {
+            border-color: #00cc00;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+        }
+
+        #searchInput::placeholder {
+            color: #888;
+        }
+
+        /* Герой секция */
+        #hero {
+            background: linear-gradient(135deg, #001a00 0%, #000000 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #00ff00;
+            text-shadow: 0 0 20px #00ff00;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #cccccc;
+        }
+
+        /* Сетка дистрибутивов */
+        .distros-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 3rem 0;
+        }
+
+        .distro-card {
+            background: #111111;
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .distro-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #00ff00;
+        }
+
+        .distro-card:hover {
+            transform: translateY(-5px);
+            border-color: #00ff00;
+            box-shadow: 0 10px 30px rgba(0, 255, 0, 0.1);
+        }
+
+        .distro-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .distro-logo {
+            font-size: 3rem;
+            margin-right: 1rem;
+        }
+
+        .distro-card h3 {
+            color: #00ff00;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .distro-info {
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item {
+            margin-bottom: 0.8rem;
+            padding: 0.5rem;
+            background: #1a1a1a;
+            border-radius: 6px;
+            border-left: 3px solid #00ff00;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #00ff00;
+        }
+
+        .distro-description {
+            color: #cccccc;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .distro-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-tag {
+            background: #1a1a1a;
+            color: #00ff00;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            border: 1px solid #00ff00;
+        }
+
+        .official-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #00ff00, #009900);
+            color: #000000;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .official-btn:hover {
+            background: linear-gradient(135deg, #00cc00, #007700);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3);
+        }
+
+        /* Сообщение о отсутствии результатов */
+        .no-results {
+            text-align: center;
+            color: #888;
+            font-size: 1.2rem;
+            padding: 3rem;
+            grid-column: 1 / -1;
+        }
+
+        /* Футер */
+        footer {
+            background: #111111;
+            color: #cccccc;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid #333;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: #00ff00;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Анимации для плавного появления */
+        .distro-card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 0 15px;
+                text-align: center;
+            }
+            
+            .filter-buttons {
+                flex-direction: column;
+                width: 100%;
+                gap: 0.5rem;
+            }
+            
+            .filter-btn {
+                width: 100%;
+                padding: 12px 15px;
+                font-size: 14px;
+            }
+
+            .hero-content h2 {
+                font-size: 2rem;
+                padding: 0 15px;
+                line-height: 1.2;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+                padding: 0 15px;
+            }
+
+            .distros-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                padding: 1rem 0;
+            }
+
+            .distro-card {
+                padding: 1rem;
+                margin: 0 10px;
+            }
+            
+            .distro-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .distro-logo {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
+            
+            .distro-card h3 {
+                font-size: 1.5rem;
+            }
+
+            #searchInput {
+                max-width: 90%;
+                margin: 0 auto;
+                font-size: 16px;
+            }
+            
+            .search-container {
+                padding: 0 15px;
+            }
+            
+            #hero {
+                padding: 2rem 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .distro-features {
+                justify-content: center;
+            }
+            
+            .feature-tag {
+                font-size: 0.7rem;
+                padding: 3px 8px;
+            }
+        }
+
+        /* Скрытый контент для SEO */
+        .seo-content {
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
+            height: 1px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- Скрытый контент для SEO -->
+    <div class="seo-content">
+        <h1>LinuxDistro - Каталог дистрибутивов Linux</h1>
+        <p>Скачать Linux бесплатно: Ubuntu, Linux Mint, Arch Linux, Fedora, Debian, Kali Linux, Manjaro, CentOS, Elementary OS, Pop OS. Дистрибутивы для начинающих, программистов, безопасности. Полные версии с официальных сайтов.</p>
+        <h2>Популярные дистрибутивы Linux</h2>
+        <ul>
+            <li>Ubuntu - для начинающих</li>
+            <li>Linux Mint - переход с Windows</li>
+            <li>Arch Linux - для продвинутых</li>
+            <li>Fedora - для разработчиков</li>
+            <li>Debian - стабильность</li>
+            <li>Kali Linux - безопасность</li>
+        </ul>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">LinuxDistro</h1>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">Все дистрибутивы</button>
+                    <button class="filter-btn" data-category="beginner">Для новичков</button>
+                    <button class="filter-btn" data-category="programmer">Для программистов</button>
+                    <button class="filter-btn" data-category="security">Для безопасности</button>
+                    <button class="filter-btn" data-category="lightweight">Легковесные</button>
+                    <button class="filter-btn" data-category="advanced">Для продвинутых</button>
+                    <button class="filter-btn" data-category="weird">Странные</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Найдите свой Linux</h2>
+                    <p>Бесплатные дистрибутивы с открытым исходным кодом</p>
+                    
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="🔍 Поиск дистрибутивов..." aria-label="Поиск дистрибутивов Linux">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="distros" aria-label="Каталог дистрибутивов Linux">
+            <div class="container">
+                <div class="distros-grid" id="distrosContainer">
+                    <!-- Дистрибутивы загружаются через JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 LinuxDistro. Все дистрибутивы распространяются бесплатно.</p>
+                <p>Open Source - Свободное программное обеспечение для всех</p>
+                <div class="footer-links">
+                    <a href="https://github.com/Ladpurz-jpg/linuxdistro" rel="nofollow">GitHub</a>
+                    <a href="/sitemap.xml" rel="nofollow">Sitemap</a>
+                    <a href="/privacy.html" rel="nofollow">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // База данных дистрибутивов
+        const distros = [
+            {
+                id: 1,
+                name: "Ubuntu",
+                description: "Самый популярный дистрибутив для начинающих. Основан на Debian, отличается стабильностью и простотой использования. Имеет огромное сообщество и отличную документацию.",
+                creator: "Canonical Ltd, Марк Шаттлворт",
+                created: "20 октября 2004 года",
+                logo: "🟠",
+                officialUrl: "https://ubuntu.com/",
+                category: "beginner",
+                features: ["Простота установки", "Дружелюбный интерфейс", "Широкая поддержка", "Стабильность"]
+            },
+            {
+                id: 2,
+                name: "Linux Mint",
+                description: "Идеальный выбор для перехода с Windows. Основан на Ubuntu, предлагает классический интерфейс Cinnamon. Всё работает 'из коробки' - включая кодеки и драйверы.",
+                creator: "Клемент Лефевр",
+                created: "27 августа 2006 года",
+                logo: "🟢",
+                officialUrl: "https://linuxmint.com/",
+                category: "beginner", 
+                features: ["Windows-подобный интерфейс", "Полная готовность к работе", "Простота использования", "Стабильность"]
+            },
+            {
+                id: 3,
+                name: "Arch Linux",
+                description: "Дистрибутив для опытных пользователей и перфекционистов. Минималистичная базовая система, которую пользователь настраивает полностью под себя. Rolling release - всегда актуальные версии ПО.",
+                creator: "Джад Винет",
+                created: "11 марта 2002 года",
+                logo: "🔵",
+                officialUrl: "https://archlinux.org/",
+                category: "advanced",
+                features: ["Полный контроль над системой", "AUR (огромный репозиторий)", "Отличная документация", "Минимализм"]
+            },
+            {
+                id: 4,
+                name: "Fedora",
+                description: "Инновационный дистрибутив от Red Hat с самыми современными технологиями. Популярен среди разработчиков благодаря поддержке контейнеров, облачных технологий и новейшего ПО.",
+                creator: "Red Hat (компания)",
+                created: "6 ноября 2003 года",
+                logo: "🔷",
+                officialUrl: "https://getfedora.org/",
+                category: "programmer",
+                features: ["Современные технологии", "Поддержка Docker/Podman", "Безопасность SELinux", "Корпоративная основа"]
+            },
+            {
+                id: 5,
+                name: "Debian",
+                description: 'Один из старейших и наиболее уважаемых дистрибутивов. Девиз: "Универсальная операционная система". Известен исключительной стабильностью и строгим подходом к свободному ПО.',
+                creator: "Ян Мёрдок",
+                created: "16 августа 1993 года",
+                logo: "🔴",
+                officialUrl: "https://www.debian.org/",
+                category: "programmer",
+                features: ["Исключительная стабильность", "Огромные репозитории", "Строгое следование FOSS", "Надежность"]
+            },
+            {
+                id: 6,
+                name: "Manjaro",
+                description: "Основан на Arch Linux, но гораздо проще в установке и использовании. Сочетает мощь Arch с удобством для пользователей. Имеет собственные репозитории и удобный установщик.",
+                creator: "Роланд Зингер, Гийом Бенуа",
+                created: "10 июля 2011 года",
+                logo: "🟢",
+                officialUrl: "https://manjaro.org/",
+                category: "beginner",
+                features: ["Простота Arch", "Автоматическое определение硬件", "Собственные репозитории", "Удобный установщик"]
+            },
+            {
+                id: 7,
+                name: "openSUSE",
+                description: "Мощный дистрибутив для разработчиков и системных администраторов. Инструмент YaST предоставляет полный контроль над системой. Имеет две ветки: Leap (стабильная) и Tumbleweed (rolling).",
+                creator: "SUSE Linux (компания)",
+                created: "1996 год",
+                logo: "🟢",
+                officialUrl: "https://www.opensuse.org/",
+                category: "programmer",
+                features: ["Мощный YaST", "Стабильность Enterprise", "Btrfs по умолчанию", "Профессиональные инструменты"]
+            },
+            {
+                id: 8,
+                name: "Zorin OS",
+                description: "Специально разработан для пользователей Windows. Максимально похож на Windows 10/11, что делает переход максимально комфортным. Основан на Ubuntu.",
+                creator: "Зорин Станкович, Артем Зорин",
+                created: "2009 год",
+                logo: "🟣",
+                officialUrl: "https://zorin.com/os/",
+                category: "beginner",
+                features: ["Максимально похож на Windows", "Простота использования", "Поддержка игр", "Элегантный дизайн"]
+            },
+            {
+                id: 9,
+                name: "Kali Linux",
+                description: "Специализированный дистрибутив для тестирования на проникновение и безопасности. Содержит сотни инструментов для аудита безопасности, криминалистики и взлома.",
+                creator: "Offensive Security",
+                created: "13 марта 2013 года",
+                logo: "⚡",
+                officialUrl: "https://www.kali.org/",
+                category: "security",
+                features: ["Инструменты пентеста", "Анонимность", "Криминалистика", "Профессиональная безопасность"]
+            },
+            {
+                id: 10,
+                name: "CentOS",
+                description: "Стабильный, предсказуемый и воспроизводимый дистрибутив, производный от Red Hat Enterprise Linux. Идеален для серверов и корпоративных сред.",
+                creator: "Red Hat (компания)",
+                created: "14 мая 2004 года",
+                logo: "🔺",
+                officialUrl: "https://www.centos.org/",
+                category: "programmer",
+                features: ["Совместимость с RHEL", "Стабильность", "Корпоративная поддержка", "Надежность серверов"]
+            },
+            {
+                id: 11,
+                name: "Elementary OS",
+                description: "Элегантный и быстрый дистрибутив, ориентированный на простоту и удобство использования. Имеет красивый интерфейс, похожий на macOS.",
+                creator: "Дэниэль Фор",
+                created: "31 марта 2011 года",
+                logo: "🟦",
+                officialUrl: "https://elementary.io/",
+                category: "beginner",
+                features: ["Элегантный дизайн", "Простота использования", "Быстрая работа", "Интуитивный интерфейс"]
+            },
+            {
+                id: 12,
+                name: "Pop!_OS",
+                description: "Дистрибутив от System76, оптимизированный для разработчиков и создателей контента. Отличная поддержка NVIDIA, удобная работа с окнами и встроенная криптография.",
+                creator: "System76",
+                created: "27 октября 2017 года",
+                logo: "🟪",
+                officialUrl: "https://pop.system76.com/",
+                category: "programmer",
+                features: ["Оптимизация для NVIDIA", "Работа с окнами", "Криптография", "Поддержка разработки"]
+            },
+            {
+                id: 13,
+                name: "Alpine Linux",
+                description: "Безопасный, легкий и простой дистрибутив на основе musl libc и BusyBox. Идеален для контейнеров, обладает минимальными требованиями к ресурсам.",
+                creator: "Натали Прото",
+                created: "2006 год",
+                logo: "🏔️",
+                officialUrl: "https://alpinelinux.org/",
+                category: "lightweight",
+                features: ["Минимальный размер", "Безопасность", "Для контейнеров", "Низкие требования"]
+            },
+            {
+                id: 14,
+                name: "Parrot OS",
+                description: "Дистрибутив для пентеста, криминалистики и разработки с акцентом на безопасность и приватность. Основан на Debian, имеет множество инструментов безопасности.",
+                creator: "Frozenbox Network",
+                created: "10 июня 2013 года",
+                logo: "🦜",
+                officialUrl: "https://parrotsec.org/",
+                category: "security",
+                features: ["Анонимность", "Инструменты безопасности", "Криминалистика", "Приватность"]
+            },
+            {
+                id: 15,
+                name: "MX Linux",
+                description: "Легкий и стабильный дистрибутив на основе Debian Stable. Сочетает элегантный и эффективный десктоп с высокой стабильностью и простотой использования.",
+                creator: "Сообщество MX",
+                created: "24 марта 2014 года",
+                logo: "🟥",
+                officialUrl: "https://mxlinux.org/",
+                category: "lightweight",
+                features: ["Легковесность", "Стабильность Debian", "Простота использования", "Эффективность"]
+            },
+            {
+                id: 16,
+                name: "Gentoo Linux",
+                description: "Дистрибутив для энтузиастов, где всё компилируется из исходного кода под конкретное железо. Максимальная оптимизация и контроль над системой.",
+                creator: "Дэниэль Роббинс",
+                created: "31 марта 2002 года",
+                logo: "🦬",
+                officialUrl: "https://www.gentoo.org/",
+                category: "advanced",
+                features: ["Компиляция из исходников", "Максимальная оптимизация", "USE-флаги", "Для энтузиастов"]
+            },
+            {
+                id: 17,
+                name: "Slackware",
+                description: "Один из старейших дистрибутивов, сохранивший философию простоты и UNIX-подобности. Для тех, кто хочет понять Linux изнутри.",
+                creator: "Патрик Фолькердинг",
+                created: "17 июля 1993 года",
+                logo: "🌀",
+                officialUrl: "http://www.slackware.com/",
+                category: "advanced",
+                features: ["Простота и стабильность", "UNIX-философия", "Ручная настройка", "Для экспертов"]
+            },
+            {
+                id: 18,
+                name: "Deepin",
+                description: "Красивый и элегантный дистрибутив из Китая с собственным окружением Deepin Desktop. Отличная интеграция с облачными сервисами.",
+                creator: "Wuhan Deepin Technology",
+                created: "28 февраля 2004 года",
+                logo: "🌀",
+                officialUrl: "https://www.deepin.org/",
+                category: "beginner",
+                features: ["Красивый интерфейс", "Простота использования", "Интеграция с облаком", "Элегантный дизайн"]
+            },
+            {
+                id: 19,
+                name: "Lubuntu",
+                description: "Официальный легковесный вариант Ubuntu с окружением LXQt. Идеален для старых компьютеров и систем с ограниченными ресурсами.",
+                creator: "Сообщество Ubuntu",
+                created: "2 мая 2010 года",
+                logo: "🔵",
+                officialUrl: "https://lubuntu.net/",
+                category: "lightweight",
+                features: ["Минимальные требования", "Быстрая работа", "Экономия ресурсов", "Простота"]
+            },
+            {
+                id: 20,
+                name: "Kubuntu",
+                description: "Официальный вариант Ubuntu с окружением KDE Plasma. Предлагает современный и настраиваемый рабочий стол с множеством функций.",
+                creator: "Сообщество Ubuntu",
+                created: "8 апреля 2005 года",
+                logo: "🔵",
+                officialUrl: "https://kubuntu.org/",
+                category: "beginner",
+                features: ["KDE Plasma", "Настраиваемость", "Современный интерфейс", "Богатые возможности"]
+            },
+            {
+                id: 21,
+                name: "Tails",
+                description: "Дистрибутив, ориентированный на приватность и анонимность. Все соединения проходят через Tor, не оставляет следов на компьютере.",
+                creator: "The Tails Project",
+                created: "23 июня 2009 года",
+                logo: "🐟",
+                officialUrl: "https://tails.net/",
+                category: "security",
+                features: ["Анонимность через Tor", "Приватность", "Без следов", "Защита данных"]
+            },
+            {
+                id: 22,
+                name: "BlackArch",
+                description: "Дистрибутив для тестирования безопасности на основе Arch Linux. Содержит более 3000 инструментов для пентеста и безопасности.",
+                creator: "Сообщество BlackArch",
+                created: "2013 год",
+                logo: "⚫",
+                officialUrl: "https://www.blackarch.org/",
+                category: "security",
+                features: ["3000+ инструментов", "Основан на Arch", "Для пентеста", "Профессиональная безопасность"]
+            },
+            {
+                id: 23,
+                name: "Void Linux",
+                description: "Независимый дистрибутив с собственной системой инициализации и менеджером пакетов. Rolling release с акцентом на стабильность.",
+                creator: "Хуан Ромеро Пардос",
+                created: "2011 год",
+                logo: "⚫",
+                officialUrl: "https://voidlinux.org/",
+                category: "advanced",
+                features: ["Независимый дистрибутив", "Rolling release", "Стабильность", "Производительность"]
+            },
+            {
+                id: 24,
+                name: "NixOS",
+                description: "Уникальный дистрибутив с декларативной конфигурацией системы. Позволяет легко воспроизводить настройки и откатывать изменения.",
+                creator: "Элко Долстра",
+                created: "2003 год",
+                logo: "❄️",
+                officialUrl: "https://nixos.org/",
+                category: "programmer",
+                features: ["Декларативная конфигурация", "Воспроизводимость", "Надежные обновления", "Для разработчиков"]
+            },
+            {
+                id: 25,
+                name: "Solus",
+                description: "Независимый дистрибутив с собственным окружением Budgie. Сфокусирован на настольных компьютерах и современном пользовательском опыте.",
+                creator: "Айки Спратт",
+                created: "27 декабря 2015 года",
+                logo: "🌞",
+                officialUrl: "https://getsol.us/",
+                category: "beginner",
+                features: ["Современный дизайн", "Простота использования", "Высокая производительность", "Интуитивность"]
+            },
+            // Странные дистрибутивы
+            {
+                id: 26,
+                name: "Hannah Montana Linux",
+                description: "Один из самых необычных дистрибутивов, посвященный поп-звезде Ханне Монтане. Розовая тема, обои с Ханной Монтаной и специальные звуковые эффекты.",
+                creator: "Неизвестный энтузиаст",
+                created: "2011 год",
+                logo: "🎀",
+                officialUrl: "https://sourceforge.net/projects/hannahmontana/",
+                category: "weird",
+                features: ["Розовая тема", "Ханна Монтана", "Необычный дизайн", "Для фанатов"]
+            },
+            {
+                id: 27,
+                name: "Biebian",
+                description: "Дистрибутив, посвященный Джастину Биберу. Основан на Debian, с тематикой канадского певца, включая обои, иконки и звуки.",
+                creator: "Фанаты Джастина Бибера",
+                created: "2011 год",
+                logo: "🌟",
+                officialUrl: "https://sourceforge.net/projects/biebian/",
+                category: "weird",
+                features: ["Тема Бибера", "Основан на Debian", "Музыкальная тематика", "Необычный"]
+            },
+            {
+                id: 28,
+                name: "Ubuntu Satanic Edition",
+                description: "Неофициальная версия Ubuntu с сатанинской тематикой. Темные цвета, перевернутые кресты и оккультная символика. Больше не поддерживается.",
+                creator: "Неизвестный",
+                created: "2007 год",
+                logo: "😈",
+                officialUrl: "https://sourceforge.net/projects/ubuntusatanic/",
+                category: "weird",
+                features: ["Сатанинская тема", "Темный дизайн", "Контроверсионный", "Не поддерживается"]
+            }
+        ];
+
+        // Функция для отображения дистрибутивов
+        function displayDistros(distrosToShow) {
+            const container = document.getElementById('distrosContainer');
+            
+            if (distrosToShow.length === 0) {
+                container.innerHTML = '<div class="no-results">😕 Дистрибутивы не найдены. Попробуйте изменить поисковый запрос или фильтр.</div>';
+                return;
+            }
+
+            container.innerHTML = distrosToShow.map(distro => `
+                <div class="distro-card" data-category="${distro.category}">
+                    <div class="distro-header">
+                        <div class="distro-logo">${distro.logo}</div>
+                        <div>
+                            <h3>${distro.name}</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="distro-info">
+                        <div class="info-item">
+                            <span class="info-label">Создатель:</span> ${distro.creator}
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Дата создания:</span> ${distro.created}
+                        </div>
+                    </div>
+                    
+                    <p class="distro-description">${distro.description}</p>
+                    
+                    <div class="distro-features">
+                        ${distro.features.map(feature => `
+                            <span class="feature-tag">${feature}</span>
+                        `).join('')}
+                    </div>
+                    
+                    <a href="${distro.officialUrl}" target="_blank" rel="noopener noreferrer" class="official-btn">
+                        📥 Скачать ${distro.name}
+                    </a>
+                </div>
+            `).join('');
+        }
+
+        // Функция для фильтрации дистрибутивов
+        function filterDistros() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const activeCategory = document.querySelector('.filter-btn.active').dataset.category;
+            
+            const filteredDistros = distros.filter(distro => {
+                const matchesSearch = distro.name.toLowerCase().includes(searchTerm) || 
+                                    distro.description.toLowerCase().includes(searchTerm) ||
+                                    distro.features.some(feature => feature.toLowerCase().includes(searchTerm));
+                
+                const matchesCategory = activeCategory === 'all' || distro.category === activeCategory;
+                
+                return matchesSearch && matchesCategory;
+            });
+            
+            displayDistros(filteredDistros);
+        }
+
+        // Инициализация фильтров
+        function initFilters() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Убираем активный класс у всех кнопок
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Добавляем активный класс нажатой кнопке
+                    this.classList.add('active');
+                    // Применяем фильтрацию
+                    filterDistros();
+                });
+            });
+        }
+
+        // Инициализация поиска
+        function initSearch() {
+            const searchInput = document.getElementById('searchInput');
+            
+            searchInput.addEventListener('input', function() {
+                filterDistros();
+            });
+            
+            // Обработка нажатия Enter в поиске
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    filterDistros();
+                }
+            });
+        }
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            // Показываем все дистрибутивы при загрузке
+            displayDistros(distros);
+            
+            // Инициализируем фильтры
+            initFilters();
+            
+            // Инициализируем поиск
+            initSearch();
+        });
+    </script>
+</body>
+</html>
